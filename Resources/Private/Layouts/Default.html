@@ -1,29 +1,28 @@
-<f:be.container
-        addCssFile="{f:uri.resource(path:'Css/tv2fluid.css')}">
+<f:be.container addCssFile="{f:uri.resource(path:'Css/tv2fluid.css')}">
     <div class="typo3-fullDoc">
         <div id="typo3-docheader">
             <div id="typo3-docheader-row1">
                 <div class="buttonsleft">
-                    <f:render section="iconButtons" />
+                    <f:render section="iconButtons"/>
                 </div>
                 <div class="buttonsright">
-                    <f:be.buttons.shortcut />
+                    <f:be.buttons.shortcut/>
                 </div>
             </div>
             <div id="typo3-docheader-row2">
                 <div class="docheader-row2-left">
                 </div>
                 <div class="docheader-row2-right">
-                    <f:be.pagePath />
-                    <f:be.pageInfo />
+                    <f:be.pagePath/>
+                    <f:be.pageInfo/>
                 </div>
             </div>
         </div>
         <div id="typo3-docbody">
             <div id="typo3-inner-docbody">
-                <f:flashMessages class="tx-extbase-flash-message" />
+                <f:flashMessages class="tx-extbase-flash-message"/>
                 <div id="tv2fluidge-content">
-                    <f:render section="content" />
+                    <f:render section="content"/>
                 </div>
             </div>
         </div>

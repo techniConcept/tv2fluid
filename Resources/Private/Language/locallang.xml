@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3locallang>
-	<meta type="array">
-		<type>module</type>
-		<description>Language labels for the extension in the FRONTEND</description>
-	</meta>
-	<data type="array">
-		<languageKey index="default" type="array">
-            <label index="mlang_tabs_tab">TemplaVoila to Fluid/GE</label>
-            <label index="mlang_labels_tabdescr">TemplaVoila to Fluid/GE</label>
-            <label index="mlang_labels_tablabel">TemplaVoila to Fluid/GE</label>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for the extension in the FRONTEND</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="mlang_tabs_tab">TemplaVoila to Fluidpages/content</label>
+            <label index="mlang_labels_tabdescr">TemplaVoila to Fluidpages/content</label>
+            <label index="mlang_labels_tablabel">TemplaVoila to Fluidpages/content</label>
 
             <label index="label_result">Result</label>
             <label index="label_select">Select</label>
@@ -19,67 +19,67 @@
             <label index="label_what_does_it_do">What does it do?</label>
             <label index="label_warning">Warning</label>
             <label index="label_fce">Flexible Content Element</label>
-            <label index="label_ge">Grid Element</label>
-			<label index="label_mark_as_negative_col_pos">Mark unreferenced elements as "colPos = -1" instead</label>
+            <label index="label_ge">Fluidcontent</label>
+            <label index="label_mark_as_negative_col_pos">Mark unreferenced elements as "colPos = -1" instead</label>
             <label index="label_mark_deleted">Flag original FCE as deleted</label>
-			<label index="label_mark_deleted_tv_template">Flag original Templavoila template as deleted</label>
-			<label index="label_use_parent_uid_for_translations">Use parent uid for content translations</label>
-			<label index="label_use_all_language_if_default_language_is_referenced">Use all language insert record if default language record is referenced</label>
+            <label index="label_mark_deleted_tv_template">Flag original Templavoila template as deleted</label>
+            <label index="label_use_parent_uid_for_translations">Use parent uid for content translations</label>
+            <label index="label_use_all_language_if_default_language_is_referenced">Use all language insert record if default language record is referenced</label>
             <label index="label_create_reference">Create shortcut content element for TV references</label>
-			<label index="label_delete_unref">Delete unused Elements</label>
+            <label index="label_delete_unref">Delete unused Elements</label>
             <label index="label_convert_ref">Convert references</label>
             <label index="label_migrate_fce">Migrate FCE</label>
             <label index="label_migrate_content">Migrate content</label>
-            <label index="label_convertmultilang_content">Convert Grid Elements</label>
-			<label index="label_convert_flexform_label">How to handle gridelements flexform (regarding language options):</label>
-			<label index="label_convert_flexform_merge">Merge translation (if not blank)</label>
-			<label index="label_convert_flexform_exclude">No translation (keep default)</label>
-			<label index="label_convert_flexform_force_language">Force translation (even if blank)</label>
-			<label index="label_flexform_field_prefix">Prefix for flexform (non content) fields:</label>
-			<label index="label_references_all_lang_label">How to convert all language shortcuts to all language gridelements:</label>
-			<label index="label_references_all_lang_keep">No conversion</label>
-			<label index="label_references_all_lang_conversion">Convert to translations with parent uid</label>
-			<label index="label_references_all_lang_update_translated_element">Converts to translations with translation uid</label>
-			<label index="label_convert_alllang_records_in_ge_to_shortcut">Convert all language records inside grid elements to shortcut elements on parent element (only use if config.sys_language_overlay will not be used in page)</label>
+            <label index="label_convertmultilang_content">Convert Fluidcontent</label>
+            <label index="label_convert_flexform_label">How to handle Fluidcontent flexform (regarding language options):</label>
+            <label index="label_convert_flexform_merge">Merge translation (if not blank)</label>
+            <label index="label_convert_flexform_exclude">No translation (keep default)</label>
+            <label index="label_convert_flexform_force_language">Force translation (even if blank)</label>
+            <label index="label_flexform_field_prefix">Prefix for flexform (non content) fields:</label>
+            <label index="label_references_all_lang_label">How to convert all language shortcuts to all language Fluidcontent:</label>
+            <label index="label_references_all_lang_keep">No conversion</label>
+            <label index="label_references_all_lang_conversion">Convert to translations with parent uid</label>
+            <label index="label_references_all_lang_update_translated_element">Converts to translations with translation uid</label>
+            <label index="label_convert_alllang_records_in_ge_to_shortcut">Convert all language records inside Fluidcontent to shortcut elements on parent element (only use if config.sys_language_overlay will not be used in page)</label>
             <label index="label_fix_sorting">Fix sorting</label>
             <label index="label_tv_template">TV Page Template</label>
             <label index="label_be_layout">Backend Layout</label>
             <label index="label_fix_options">Options</label>
             <label index="label_page_uid">Page UID</label>
-			<label index="label_ext_conf_migration_pages_depth_limit">Pages depth limit for migration</label>
-			<label index="label_ext_conf_include_non_root_pages">Include non root pages in migration</label>
+            <label index="label_ext_conf_migration_pages_depth_limit">Pages depth limit for migration</label>
+            <label index="label_ext_conf_include_non_root_pages">Include non root pages in migration</label>
 
             <label index="desc_backup_warning">Before executing an action, make sure you create a full backup of your TYPO3 database!</label>
             <label index="desc_docs_and_help">This extension is hosted on GitHub. Feel free to submit feedback, bugs and changerequest directly at</label>
 
-            <label index="mod_index_title">TemplaVoila to Fluidtemplate and Grid Elements</label>
-            <label index="mod_index_description">TemplaVoila to Fluid/GE is a set of tools which can be helpful when you want to migrate an existing TYPO3 website from TemplaVoila to Fluid / GridElements</label>
+            <label index="mod_index_title">TemplaVoila to Fluidpages and Fluidcontent</label>
+            <label index="mod_index_description">TemplaVoila to Fluidpages/content is a set of tools which can be helpful when you want to migrate an existing TYPO3 website from TemplaVoila to Fluidpages / Fluidcontent</label>
 
             <label index="mod_deleteunref_title">Delete unreferenced elements</label>
             <label index="mod_deleteunref_result_deleted">records has been marked as deleted.</label>
             <label index="mod_deleteunref_description">Searches recursive on all pages for unreferenced elements and sets all found elements as deleted in the TYPO3 database.</label>
 
-			<label index="mod_convertref_title">Convert reference elements to 'insert records' elements</label>
-			<label index="mod_convertref_result_converted">records has been converted.</label>
-			<label index="mod_convertref_description">Searches recursive on all pages for TemplaVoila reference elements and converts them to 'insert records' elements.</label>
+            <label index="mod_convertref_title">Convert reference elements to 'insert records' elements</label>
+            <label index="mod_convertref_result_converted">records has been converted.</label>
+            <label index="mod_convertref_description">Searches recursive on all pages for TemplaVoila reference elements and converts them to 'insert records' elements.</label>
 
-            <label index="mod_migratefce_title">Migrate TV FCE content to Grid Element</label>
-            <label index="mod_migratefce_description1">Migrates the content from the selected FCE to the selected Grid Element and changes the content element type to Grid Element. If the FCE contains content columns, you can remap them to Grid Element columns.</label>
-            <label index="mod_migratefce_description2">Note: After migration all Grid Elements with shortcut-records will not be shown on the output page if TemplaVoila is still installed.</label>
+            <label index="mod_migratefce_title">Migrate TV FCE content to Fluidcontent</label>
+            <label index="mod_migratefce_description1">Migrates the content from the selected FCE to the selected Fluidcontent and changes the content element type to Fluidcontent. If the FCE contains content columns, you can remap them to Fluidcontent columns.</label>
+            <label index="mod_migratefce_description2">Note: After migration all Fluidcontent with shortcut-records will not be shown on the output page if TemplaVoila is still installed.</label>
 
-            <label index="mod_migratecontent_title">Migrate content from TemplaVoila to Fluidtemplate</label>
+            <label index="mod_migratecontent_title">Migrate content from TemplaVoila to Fluidpages</label>
             <label index="mod_migratecontent_description1">Migrate content from TemplaVoila content columns to Fluid backend layout columns. Use this module if you have several TemplaVoila content columns which do not have an oldStyleColumnNumber setting or if you want to rearrange content elements from TemplaVoila content columns to Fluid backend layout columns.</label>
             <label index="mod_migratecontent_description2">All TemplaVoila backend layout settings on pages will be replaced with the selected Fluid backend layout.</label>
             <label index="mod_migratecontent_description3">After content migration, you should not rearrage or create new content elements on pages with a Fluid Template, when TemplaVoila is still installed. TemplaVoila uses a method named correctSortingAndColposFieldsForPage, which may move all content elements to column 0.</label>
             <label index="mod_migratecontent_ce_updated">content elements have been updated.</label>
             <label index="mod_migratecontent_templates_updated">page templates have been updated.</label>
 
-            <label index="mod_convertmultilangcontent_title">Convert GridElements where the language is set to "all languages"</label>
-            <label index="mod_convertmultilangcontent_description1">On multilingual sites you can set the language of TemplaVoila FCEs to "all languages" and translate multilingual content directly inside the FCE container. Using backend layouts and GridElements this can cause some problems after migrating of a TemplaVoila site with this extension and I would recommend to use a translated Grid Element for each page language.</label>
-            <label index="mod_convertmultilangcontent_description2">This converter clones Grid Elements with "all languages" so you have individually translated Grid Elements for each page translation. The conversion process also reassigns all child content elements of the original Grid element to the now translated Grid Element.</label>
+            <label index="mod_convertmultilangcontent_title">Convert Fluidcontent where the language is set to "all languages"</label>
+            <label index="mod_convertmultilangcontent_description1">On multilingual sites you can set the language of TemplaVoila FCEs to "all languages" and translate multilingual content directly inside the FCE container. Using backend layouts and Fluidcontent this can cause some problems after migrating of a TemplaVoila site with this extension and I would recommend to use a translated Fluidcontent for each page language.</label>
+            <label index="mod_convertmultilangcontent_description2">This converter clones Fluidcontent with "all languages" so you have individually translated Fluidcontent for each page translation. The conversion process also reassigns all child content elements of the original Grid element to the now translated Fluidcontent.</label>
             <label index="mod_convertmultilangcontent_description3">After using this converter, you should use the "Fix sorting" module to correct the sorting of translated content elements.</label>
             <label index="mod_convertmultilangcontent_warning">Use this converter after you have migrated your TV FCEs and the page content. Also make sure you create another SQL dump of the migrated TYPO3 database so you quickly can do a rollback if the conversion does not work as expected.</label>
-            <label index="mod_convertmultilangcontent_ge_cloned">Grid Elements clones have been created.</label>
+            <label index="mod_convertmultilangcontent_ge_cloned">Fluidcontent clones have been created.</label>
             <label index="mod_convertmultilangcontent_ce_updated">content elements have been updated.</label>
 
             <label index="mod_fixsorting_title">Fix sorting of translated content elements</label>
@@ -92,6 +92,6 @@
             <label index="mod_migratefce_ce_updated">content elements have been updated.</label>
             <label index="mod_migratefce_fces_converted">flexible content elements have been migrated.</label>
 
-		</languageKey>
-	</data>
+        </languageKey>
+    </data>
 </T3locallang>

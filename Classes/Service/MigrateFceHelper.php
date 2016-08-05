@@ -190,7 +190,7 @@ class MigrateFceHelper implements SingletonInterface
     {
         $tvTemplateUid = (int)$contentElement['tx_templavoila_to'];
         list($flexform, $children) = $this->sharedHelper->cleanFlexform($contentElement['tx_templavoila_flex'], $tvTemplateUid, false);
-        $updateFields = array (
+        $updateFields = array(
             'CType' => 'fluidcontent_content',
             'pi_flexform' => $flexform,
             'tx_flux_children' => $children,

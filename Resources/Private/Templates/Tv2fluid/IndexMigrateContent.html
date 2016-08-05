@@ -1,61 +1,75 @@
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 <f:section name="iconButtons">
-    <f:render partial="Adminbuttons" />
+    <f:render partial="Adminbuttons"/>
 </f:section>
 
 <f:section name="content">
-    <h2><f:translate key="mod_migratecontent_title" /></h2>
+    <h2>
+        <f:translate key="mod_migratecontent_title"/>
+    </h2>
 
-    <h3><f:translate key="label_what_does_it_do" /></h3>
-    <p><f:translate key="mod_migratecontent_description1" /></p>
-    <p><f:translate key="mod_migratecontent_description2" /></p>
-    <p><f:translate key="mod_migratecontent_description3" /></p>
+    <h3>
+        <f:translate key="label_what_does_it_do"/>
+    </h3>
+    <p>
+        <f:translate key="mod_migratecontent_description1"/>
+    </p>
+    <p>
+        <f:translate key="mod_migratecontent_description2"/>
+    </p>
+    <p>
+        <f:translate key="mod_migratecontent_description3"/>
+    </p>
 
     <f:form action="indexMigrateContent" name="formdata" object="{formdata}">
 
         <table class="migration">
             <tr>
                 <td>
-                    <label for="tvtemplate"><f:translate key="label_tv_template"/></label><br/>
-                    <f:form.select name="tvtemplate" property="tvtemplate" options="{tvtemplates}" value="{formdata.tvtemplate}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}" />
+                    <label for="tvtemplate">
+                        <f:translate key="label_tv_template"/>
+                    </label><br/>
+                    <f:form.select name="tvtemplate" property="tvtemplate" options="{tvtemplates}" value="{formdata.tvtemplate}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}"/>
                 </td>
                 <td></td>
                 <td>
-                    <label for="belayout"><f:translate key="label_be_layout"/></label><br/>
-                    <f:form.select name="belayout" property="belayout" options="{belayouts}" value="{formdata.belayout}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}" />
+                    <label for="belayout">
+                        <f:translate key="label_be_layout"/>
+                    </label><br/>
+                    <f:form.select name="belayout" property="belayout" options="{belayouts}" value="{formdata.belayout}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}"/>
                 </td>
             </tr>
 
             <f:if condition="{tvContentCols}">
                 <f:for each="{tvContentCols}" as="tvContentCol" iteration="iterator">
                     <f:if condition="{iterator.index} > 0">
-                    <tr>
-                        <td>
-                            <f:form.select name="tv_col_{iterator.index}" property="tv_col_{iterator.index}" options="{tvContentCols}" />
-                        </td>
-                        <td class="arrow">&#8594;</td>
-                        <td>
-                            <f:form.select name="be_col_{iterator.index}" property="be_col_{iterator.index}" options="{beContentCols}" />
-                        </td>
-                        <td></td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <f:form.select name="tv_col_{iterator.index}" property="tv_col_{iterator.index}" options="{tvContentCols}"/>
+                            </td>
+                            <td class="arrow">&#8594;</td>
+                            <td>
+                                <f:form.select name="be_col_{iterator.index}" property="be_col_{iterator.index}" options="{beContentCols}"/>
+                            </td>
+                            <td></td>
+                        </tr>
                     </f:if>
                 </f:for>
             </f:if>
         </table>
 
-		<f:form.checkbox id="markdeleted" name="markdeleted" property="markdeleted" value="1" checked="false"/>
-		<label for="markdeleted"><f:translate key="label_mark_deleted_tv_template"/></label>
-		<br><br>
+        <f:form.checkbox id="markdeleted" name="markdeleted" property="markdeleted" value="1" checked="false"/>
+        <label for="markdeleted">
+            <f:translate key="label_mark_deleted_tv_template"/>
+        </label>
+        <br><br>
 
-		<label for="convert_flexform_option"><f:translate key="label_convert_flexform_label" /></label><br>
-		<f:form.select value="{formdata.convertflexformoption}" options="{merge: '{f:translate(key: \'label_convert_flexform_merge\')}', exclude: '{f:translate(key: \'label_convert_flexform_exclude\')}', forceLanguage: '{f:translate(key: \'label_convert_flexform_force_language\')}'}" id="convert_flexform_option" name="convertflexformoption" property="convertflexformoption" />
-		<br><br>
-
-		<label for="flexformfieldprefix"><f:translate key="label_flexform_field_prefix"/></label><br>
-		<f:form.textfield id="flexform_field_prefix" name="flexformfieldprefix" property="flexformfieldprefix" value="{formdata.flexformfieldprefix}" />
-		<br><br>
+        <label for="convert_flexform_option">
+            <f:translate key="label_convert_flexform_label"/>
+        </label><br>
+        <f:form.select value="{formdata.convertflexformoption}" options="{merge: '{f:translate(key: \'label_convert_flexform_merge\')}', exclude: '{f:translate(key: \'label_convert_flexform_exclude\')}', forceLanguage: '{f:translate(key: \'label_convert_flexform_force_language\')}'}" id="convert_flexform_option" name="convertflexformoption" property="convertflexformoption"/>
+        <br><br>
 
         <f:form.submit value="" property="dummySubmit" style="display: none; "/>
         <f:form.submit value="{f:translate(key: 'label_start')}" property="startAction" class="start"/>
