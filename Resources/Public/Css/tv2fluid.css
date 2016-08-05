@@ -1,0 +1,69 @@
+p {
+	margin: 0 0 10px 0;
+}
+
+p.warning {
+	padding: 5px;
+	border: 1px solid #000000;
+	background: #ff0000;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+li {
+	margin: 0 0 5px 0;
+}
+
+a.action {
+	color: #ffffff;
+	margin: 2px 8px 0 0;
+	line-height: 16px;
+	padding: 0 0 0 20px;
+	display: inline-block;
+}
+
+a.btn_delete_unref {
+	background: url(../Icons/unlink.png) no-repeat;
+}
+
+a.btn_convert_ref {
+	background: url(../Icons/tv-makelocalcopy.gif) no-repeat;
+}
+
+a.btn_migrate_fce {
+	background: url(../Icons/tv-fce.png) no-repeat;
+}
+
+a.btn_migrate_content {
+	background: url(../Icons/tv-template.gif) no-repeat;
+}
+
+a.btn_convertmultilang_content {
+	background: url(../Icons/multilang.png) no-repeat;
+}
+
+a.btn_fix_sorting {
+	background: url(../Icons/multilang.png) no-repeat;
+}
+
+a.ext-link {
+	text-decoration: underline;
+}
+
+td.arrow {
+	width: 40px;
+	text-align: center;
+	font-size: 30px;
+}
+
+input.start {
+	margin: 10px 0 0 0;
+}
+
+table.migration {
+	margin: 0 0 10px 0;
+}
+
+.error {
+	color: #ff0000;
+}

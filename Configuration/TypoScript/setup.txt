@@ -1,0 +1,7 @@
+module.tx_tv2fluid {
+    settings {
+        layoutsPageUids {
+
+        }
+    }
+}

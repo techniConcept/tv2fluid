@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="iconButtons">
+    <f:render partial="Adminbuttons" />
+</f:section>
+
+<f:section name="content">
+    <h2><f:translate key="mod_index_title" /></h2>
+    <p><f:translate key="mod_index_description" /></>
+    <h3><f:translate key="label_index" /></h3>
+    <ul>
+        <li>- <f:link.action action="indexDeleteUnreferencedElements"><f:translate key="mod_deleteunref_title" /></f:link.action></li>
+	    <li>- <f:link.action action="indexConvertReferenceElements"><f:translate key="mod_convertref_title" /></f:link.action></li>
+        <li>- <f:link.action action="indexMigrateFce"><f:translate key="mod_migratefce_title" /></f:link.action></li>
+        <li>- <f:link.action action="indexMigrateContent"><f:translate key="mod_migratecontent_title" /></f:link.action></li>
+        <li>- <f:link.action action="indexConvertMultilangContent"><f:translate key="mod_convertmultilangcontent_title" /></f:link.action></li>
+        <li>- <f:link.action action="indexFixSorting"><f:translate key="mod_fixsorting_title" /></f:link.action></li>
+    </ul>
+
+    <br>
+    <h4><f:translate key="label_warning" /></h4>
+    <p class="warning"><f:translate key="desc_backup_warning" /></p>
+
+    <br>
+    <h4><f:translate key="label_docs" /></h4>
+    <p><f:translate key="desc_docs_and_help" /> <a href="https://github.com/derhansen/tv2fluid" target="_blank" class="ext-link">https://github.com/derhansen/tv2fluid</a></p>
+
+</f:section>
+

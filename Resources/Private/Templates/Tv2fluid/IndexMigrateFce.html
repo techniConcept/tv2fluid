@@ -1,0 +1,53 @@
+<f:layout name="Default" />
+
+<f:section name="iconButtons">
+    <f:render partial="Adminbuttons" />
+</f:section>
+
+<f:section name="content">
+    <h2><f:translate key="mod_migratefce_title" /></h2>
+
+    <h3><f:translate key="label_what_does_it_do" /></h3>
+    <p><f:translate key="mod_migratefce_description1" /></p>
+    <p><f:translate key="mod_migratefce_description2" /></p>
+
+    <f:form action="indexMigrateFce" name="formdata" object="{formdata}">
+
+        <table class="migration">
+            <tr>
+                <td>
+                    <label for="fce"><f:translate key="label_fce"/></label><br/>
+                    <f:form.select property="fce" name="fce" options="{allFce}" value="{formdata.fce}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}"/>
+                </td>
+                <td></td>
+                <td>
+                    <label for="ge"><f:translate key="label_ge"/></label><br/>
+                    <f:form.select property="ge" name="ge" options="{allGe}" value="{formdata.ge}" optionValueField="uid" optionLabelField="title" additionalAttributes="{onChange : 'document.formdata.submit();'}"/>
+                </td>
+            </tr>
+
+            <f:if condition="{fceContentCols}">
+                <f:for each="{fceContentCols}" as="tvContentCol" iteration="iterator">
+                    <f:if condition="{iterator.index} > 0">
+                        <tr>
+                            <td>
+                                <f:form.select name="tv_col_{iterator.index}" property="tv_col_{iterator.index}" options="{fceContentCols}" />
+                            </td>
+                            <td class="arrow">&#8594;</td>
+                            <td>
+                                <f:form.select name="ge_col_{iterator.index}" property="ge_col_{iterator.index}" options="{geContentCols}" />
+                            </td>
+                        </tr>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </table>
+
+        <f:form.checkbox id="markdeleted" name="markdeleted" property="markdeleted" value="1" checked="false"/>
+        <label for="markdeleted"><f:translate key="label_mark_deleted"/></label>
+        <br/>
+
+        <f:form.submit value="" property="dummySubmit" style="display: none; "/>
+        <f:form.submit value="{f:translate(key: 'label_start')}" property="startAction" class="start"/>
+    </f:form>
+</f:section>
