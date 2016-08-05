@@ -137,7 +137,7 @@ class MigrateFceHelper implements SingletonInterface
         foreach ($fluidcontentConfigurationService->getContentElementFormInstances() as $extensionFluidcontents) {
             /** @var Form $fluidcontentForm */
             foreach ($extensionFluidcontents as $fluidcontentForm) {
-                $fluidcontents[$fluidcontentForm->getOption('contentElementId')] = $fluidcontentForm->getOption('contentElementId');
+                $fluidcontents[$fluidcontentForm->getOption('contentElementId')] = $fluidcontentForm->getExtensionName() . ' - ' . $fluidcontentForm->getLabel();
             }
         }
 

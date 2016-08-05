@@ -338,7 +338,7 @@ class SharedHelper implements SingletonInterface
                         foreach ($exposedView->getGrid()->getRows() as $row) {
                             /** @var Form\Container\Column $column */
                             foreach ($row->getColumns() as $column) {
-                                $columns[$column->getName()] = $column->getName();
+                                $columns[$column->getName()] = $column->getLabel();
                             }
                         }
                     }
