@@ -39,11 +39,11 @@
             </tr>
 
             <f:if condition="{fceContentCols}">
-                <f:for each="{fceContentCols}" as="tvContentCol" iteration="iterator">
+                <f:for each="{fceContentCols}" as="tvContentCol" key="tvContentColKey" iteration="iterator">
                     <f:if condition="{iterator.index} > 0">
                         <tr>
                             <td>
-                                <f:form.select name="tv_col_{iterator.index}" property="tv_col_{iterator.index}" options="{fceContentCols}"/>
+                                <f:form.select name="tv_col_{iterator.index}" property="tv_col_{iterator.index}" options="{fceContentCols}" value="{tvContentColKey}"/>
                             </td>
                             <td class="arrow">&#8594;</td>
                             <td>
@@ -55,7 +55,7 @@
             </f:if>
         </table>
 
-        <f:form.checkbox id="markdeleted" name="markdeleted" property="markdeleted" value="1" checked="false"/>
+        <f:form.checkbox id="markdeleted" name="markdeleted" property="markdeleted" value="1" checked="true"/>
         <label for="markdeleted">
             <f:translate key="label_mark_deleted"/>
         </label>
