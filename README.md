@@ -29,25 +29,25 @@ How to use it
 * Create temporary pages, one for each page template
     * Set the corresponding FluidPages layout
 * Add TS config to your first root page for each relation between created pages and templates. Example:
-    ```
-    module.tx_tv2fluid {
-         settings {
-             layoutsPageUids {
-                 <CamelCaseExtensionName-ex:MySkin> {
-                     <TemplateFilenameWithoutExt-ex:Default> = <pid>
-                     ...
-                 }
+```
+module.tx_tv2fluid {
+     settings {
+         layoutsPageUids {
+             <CamelCaseExtensionName-ex:MySkin> {
+                 <TemplateFilenameWithoutExt-ex:Default> = <pid>
+                 ...
              }
          }
      }
-    ```
+ }
+```
 * Set backend layout on root pages to FluidPage
-    ```
-    UPDATE pages
-    SET backend_layout='fluidpages__fluidpages',
-        backend_layout_next_level='fluidpages__fluidpages'
-    WHERE uid=<pageUid>;
-    ```
+```
+UPDATE pages
+SET backend_layout='fluidpages__fluidpages',
+    backend_layout_next_level='fluidpages__fluidpages'
+WHERE uid=<pageUid>;
+```
 * Migrate TV FCE content to Fluidcontent
 * Migrate content from TemplaVoila to Fluidpages
 * Disable TemplaVoila
