@@ -30,6 +30,10 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '6.2.*',
+            'templavoila' => '1.9.*',
+            'flux' => '7.2.3-0.0.0',
+            'fluidpages' => '3.3.1-0.0.0',
+            'fluidcontent' => '4.3.3-0.0.0',
         ),
         'conflicts' => array(),
         'suggests' => array(),
