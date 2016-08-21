@@ -1,35 +1,54 @@
 Tv2Fluid
 ========
+Backend module with tools that can be helpful when migration from TemplaVoila to FluidPages and FluidContent.
 
 Based on the extension **sf_tv2fluidge** (https://github.com/derhansen/sf_tv2fluidge) from Torben Hansen. Thanks to him for the initial work.
 
+Provided "as is". Feel free to contribute.
 
-HOW TO
-------
+Requirements
+------------
 
-* Contrôler/Corriger la première page pour avoir un héritage sur les pages enfants de templavoila
-* Lancer les cleanups avec fluidpages, fluidcontent, flux désactivés
-* Créer des pages avec les différents templates fluid
-* Ajouter la config TS pour la relation entre les pages créées et les templates. Exemple :
+* Having a full TemplaVoila running website
+* Having FluidPages templates corresponding to TemplaVoila page templates
+* Having FluidContent element corresponding to TemplaVoila FCEs
+* Best practices are to have the same fields names on each side for easy FlexForm migration
+
+How to use it
+-------------
+
+* BACKUP your database!
+* Install the extension (and dependencies)
+* Check on every root pages that TemplaVoila templates are set for current page and subpages
+* Temporarly disable Flux, FluidPages and FluidContent (there is a conflict with TemplaVoila on cleanup)
+* Run the cleanups tasks:
+    * Delete unreferenced elements
+    * Convert reference elements to 'insert records' elements
+    * Delete unreferenced elements (yes, once again!)
+* Enable again Flux, FluidPages and FluidContent
+* Create temporary pages, one for each page template
+    * Set the corresponding FluidPages layout
+* Add TS config to your first root page for each relation between created pages and templates. Example:
     ```
     module.tx_tv2fluid {
          settings {
              layoutsPageUids {
-                 EbsSkin {
-                     Home = 1673
-                     Index = 1674
-                     Index2Cols = 1675
+                 <CamelCaseExtensionName-ex:MySkin> {
+                     <TemplateFilenameWithoutExt-ex:Default> = <pid>
+                     ...
                  }
              }
          }
      }
     ```
-* Mettre les backend layouts à fluidpages
+* Set backend layout on root pages to FluidPage
     ```
     UPDATE pages
-    SET backend_layout='fluidpages__fluidpage',
+    SET backend_layout='fluidpages__fluidpages',
         backend_layout_next_level='fluidpages__fluidpages'
     WHERE uid=<pageUid>;
     ```
-* Migrer les FCEs
-* Migrer les pages
+* Migrate TV FCE content to Fluidcontent
+* Migrate content from TemplaVoila to Fluidpages
+* Disable TemplaVoila
+* Check your website!
